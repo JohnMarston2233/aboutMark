@@ -1,0 +1,17 @@
+.header {
+  @include image-set("../img/header/header-bg");
+
+  padding: 45px 0 109px;
+
+  &__content {
+    @include flex-all-sb;
+
+    margin-bottom: 122px;
+  }
+
+  &__logo {
+    width: 130px;
+    height: 37px;
+    fill: var(--light-color);
+  }
+}

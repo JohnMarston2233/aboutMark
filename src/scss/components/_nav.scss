@@ -1,0 +1,31 @@
+.nav {
+  &__list {
+    @include flex-v-center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--light-color);
+  }
+
+  &__theme-icon {
+    width: 35px;
+    height: 35px;
+
+    &[data-theme="moon"] {
+      display: none;
+      fill: var(--dark-color);
+    }
+
+    &[data-theme="sun"] {
+      fill: var(--light-color);
+    }
+  }
+}

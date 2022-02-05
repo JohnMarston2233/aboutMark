@@ -1,0 +1,57 @@
+<header class="header">
+  <div class="container">
+    <div class="header__content">
+      <svg class="header__logo">
+        <use xlink:href="img/sprite.svg#logo"></use>
+      </svg>
+      <nav class="nav" title="header navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">биография</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">личная жизнь</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">направления</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">интервью</a></li>
+          <li class="nav__item">
+            <button class="btn-reset nav__switch-theme">
+              <svg class="nav__theme-icon" data-theme="moon">
+                <use xlink:href="img/sprite.svg#moon"></use>
+              </svg>
+              <svg class="nav__theme-icon" data-theme="sun">
+                <use xlink:href="img/sprite.svg#sun"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="promo">
+      <div class="promo__text">
+        <div class="text-about promo__about">
+          страница известного программиста
+        </div>
+        <h1 class="title promo__title">Американский Медиамагнат, Интернет-Предприниматель и Филантроп</h1>
+        <div class="promo__descr">
+          помимо IT программирования, активно занимается созданием идеи, которая позволит жителям малоразвитых стран иметь бесплатный интернет.
+        </div>
+        <div class="promo__more-details">
+          <a class="promo__btn-link" href="https://ru.wikipedia.org/wiki/%D0%A6%D1%83%D0%BA%D0%B5%D1%80%D0%B1%D0%B5%D1%80%D0%B3,_%D0%9C%D0%B0%D1%80%D0%BA" target="_blank">Подробнее</a>
+          <a class="promo__link" href="https://www.instagram.com/accounts/login/?next=/zuck/" target="_blank">
+            <svg class="promo__link-icon">
+              <use xlink:href="img/sprite.svg#inst"></use>
+            </svg>
+          </a>
+          <a class="promo__link" href="https://www.facebook.com/zuck" target="_blank">
+            <svg class="promo__link-icon">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <picture>
+        <source srcset="img/promo/promo-face-img.avif" type="image/avif">
+        <source srcset="img/promo/promo-face-img.webp" type="image/webp">
+        <img class="promo__image" loading="lazy" src="img/promo/promo-face-img.png" width="500" height="500" alt="Mark Zuckerberg">
+      </picture>
+    </div>
+  </div>
+</header>
