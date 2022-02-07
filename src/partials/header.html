@@ -1,31 +1,36 @@
-<header class="header">
+<header class="header" style="opacity: 0;">
   <div class="container">
-    <div class="header__content">
-      <svg class="header__logo">
+    <div class="header__content header__content--active">
+      <svg class="logo">
         <use xlink:href="img/sprite.svg#logo"></use>
       </svg>
       <nav class="nav" title="header navigation">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">биография</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">личная жизнь</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">направления</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">интервью</a></li>
-          <li class="nav__item">
-            <button class="btn-reset nav__switch-theme">
-              <svg class="nav__theme-icon" data-theme="moon">
-                <use xlink:href="img/sprite.svg#moon"></use>
-              </svg>
-              <svg class="nav__theme-icon" data-theme="sun">
-                <use xlink:href="img/sprite.svg#sun"></use>
-              </svg>
-            </button>
-          </li>
+        <ul class="nav__list" data-menu>
+          <li class="nav__item"><a class="nav__link" href="#section-about" data-menu-item>биография</a></li>
+          <li class="nav__item"><a class="nav__link" href="#section-directions" data-menu-item>направления</a></li>
+          <li class="nav__item"><a class="nav__link" href="#section-interview" data-menu-item>интервью</a></li>
+          <li class="nav__item"><a class="nav__link" href="#section-footer" data-menu-item>контакты</a></li>
         </ul>
+        <button class="btn-reset nav__switch-theme" data-theme="btn">
+          <div class="nav__icon-wrapper nav__icon-wrapper--moon">
+            <svg class="nav__theme-icon" data-theme="moon">
+              <use xlink:href="img/sprite.svg#moon"></use>
+            </svg>
+          </div>
+          <div class="nav__icon-wrapper nav__icon-wrapper--sun nav__icon-wrapper--active">
+            <svg class="nav__theme-icon" data-theme="sun">
+              <use xlink:href="img/sprite.svg#sun"></use>
+            </svg>
+          </div>
+        </button>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+          <span class="burger__line"></span>
+        </button>
       </nav>
     </div>
 
-    <div class="promo">
-      <div class="promo__text">
+    <div class="promo" data-menu-overlay>
+      <div class="promo__text" data-aos="fade-up" data-aos-offset="300" data-aos-duration="1500" data-aos-delay="1700">
         <div class="text-about promo__about">
           страница известного программиста
         </div>
@@ -47,11 +52,18 @@
           </a>
         </div>
       </div>
-      <picture>
-        <source srcset="img/promo/promo-face-img.avif" type="image/avif">
-        <source srcset="img/promo/promo-face-img.webp" type="image/webp">
-        <img class="promo__image" loading="lazy" src="img/promo/promo-face-img.png" width="500" height="500" alt="Mark Zuckerberg">
-      </picture>
+      <div class="promo__image-wrapper" style="opacity: 0;">
+        <picture class="promo__theme promo__theme--active">
+          <source srcset="img/promo/promo-face-img.avif" type="image/avif">
+          <source srcset="img/promo/promo-face-img.webp" type="image/webp">
+          <img class="promo__image" loading="lazy" src="img/promo/promo-face-img.png" width="500" height="500" alt="Mark Zuckerberg">
+        </picture>
+        <picture class="promo__theme">
+          <source srcset="img/promo/promo-face-img-light-theme.avif" type="image/avif">
+          <source srcset="img/promo/promo-face-img-light-theme.webp" type="image/webp">
+          <img class="promo__image" loading="lazy" src="img/promo/promo-face-img-light-theme.png" width="500" height="500" alt="Mark Zuckerberg">
+        </picture>
+      </div>
     </div>
   </div>
 </header>

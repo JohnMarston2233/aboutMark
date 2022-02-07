@@ -1,0 +1,22 @@
+.interview {
+  padding: 87px 0 150px;
+
+  &__title {
+    margin-bottom: 120px;
+  }
+
+  &__content {
+    @include flex;
+
+    justify-content: space-between;
+  }
+
+  &__descr {
+    max-width: 410px;
+    line-height: 45px;
+  }
+
+  &__link-full {
+    color: var(--facebook-color);
+  }
+}

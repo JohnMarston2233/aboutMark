@@ -1,0 +1,49 @@
+.about {
+  padding: 150px 0;
+
+  &__wrapper {
+    @include flex;
+
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 200px;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text {
+    max-width: 500px;
+
+    &--right {
+      text-align: right;
+    }
+  }
+
+  &__title {
+    margin-bottom: 57px;
+  }
+
+  &__descr {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__img-wrapper {
+    position: sticky;
+    top: 50px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    border: 3px solid var(--light-color);
+  }
+}

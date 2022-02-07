@@ -1,0 +1,86 @@
+.footer {
+  @include image-set("../img/footer/footer-bg");
+  @include bg-cover;
+
+  overflow: hidden;
+  padding: 71px 0 42px;
+  background-color: var(--dark-color);
+
+  &__text {
+    @include flex-v-center;
+
+    margin-bottom: 93px;
+  }
+
+  &__text-item {
+    width: calc(100% / 3);
+
+    &--text-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__text-authors {
+    text-align: center;
+  }
+
+  &__authors-title {
+    margin: 0;
+    margin-bottom: 18px;
+  }
+
+  &__text-author {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__contacts-title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__contacts-content {
+    @include flex-v-center;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__contacts-link {
+    transition: transform 500ms ease-in-out;
+  }
+
+  &__contacts-icon {
+    margin-right: 11px;
+    width: 24px;
+    height: 24px;
+    fill: var(--light-color);
+  }
+
+  &__contacts-text {
+    line-height: 16px;
+  }
+
+  &__rights {
+    @include flex-all-center;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -27px;
+      width: 200%;
+      height: 1px;
+      background-color: rgba(255 255 255 / 20%);
+      transform: translateX(-50%);
+    }
+  }
+}

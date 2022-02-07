@@ -1,17 +1,13 @@
 .header {
   @include image-set("../img/header/header-bg");
+  @include bg-cover;
 
   padding: 45px 0 109px;
+  transition: opacity 500ms ease-in-out;
 
   &__content {
     @include flex-all-sb;
 
     margin-bottom: 122px;
-  }
-
-  &__logo {
-    width: 130px;
-    height: 37px;
-    fill: var(--light-color);
   }
 }

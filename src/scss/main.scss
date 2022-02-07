@@ -5,6 +5,15 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/burger";
 @import "./components/header";
 @import "./components/nav";
 @import "./components/promo";
+@import "./components/about";
+@import "./components/directions";
+@import "./components/interview";
+@import "./components/video-block";
+@import "./components/footer";
+
+// media queries
+@import "./media";

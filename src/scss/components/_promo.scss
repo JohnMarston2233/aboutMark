@@ -2,18 +2,21 @@
   @include flex;
 
   justify-content: space-between;
+  transition: filter 500ms ease-in-out;
 
   &__text {
+    margin-right: 20px;
     max-width: 565px;
   }
 
   &__about {
     margin-bottom: 32px;
+    transition: color 500ms ease-in-out;
   }
 
   &__title {
-    margin: 0;
     margin-bottom: 28px;
+    transition: color 500ms ease-in-out;
   }
 
   &__descr {
@@ -21,7 +24,8 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 29px;
-    color: rgb(255 255 255 / 60%);
+    color: var(--light-color);
+    transition: color 500ms ease-in-out;
   }
 
   &__more-details {
@@ -32,7 +36,7 @@
     @include flex-all-center;
 
     margin-right: 21px;
-    border: 2px solid rgb(255 255 255 / 50%);
+    border: 2px solid var(--light-color);
     border-radius: 5px;
     height: 53px;
     min-width: 159px;
@@ -40,15 +44,25 @@
     font-weight: 600;
     font-size: 18px;
     color: var(--light-color);
+    transition:
+      border-color 500ms ease-in-out,
+      background-color 500ms ease-in-out,
+      color 500ms ease-in-out,
+      transform 500ms ease-in-out;
   }
 
   &__link {
     @include flex-all-center;
 
-    border: 2px solid rgb(255 255 255 / 50%);
+    border: 2px solid var(--light-color);
     border-radius: 100%;
     width: 40px;
     height: 40px;
+    transition:
+      border-color 500ms ease-in-out,
+      background-color 500ms ease-in-out,
+      color 500ms ease-in-out,
+      transform 500ms ease-in-out;
 
     &:not(:last-child) {
       margin-right: 10px;
@@ -59,9 +73,37 @@
     width: 20px;
     height: 20px;
     fill: var(--light-color);
+    transition: fill 500ms ease-in-out;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &__theme {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 500ms ease-in-out,
+      visibility 500ms ease-in-out;
+
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__image {
     transform: translateY(-36px);
+  }
+
+  &--burger {
+    filter: blur(6px);
   }
 }

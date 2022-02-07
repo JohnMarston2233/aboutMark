@@ -1,5 +1,6 @@
 // если вы хотите использовать sass-переменные - удалите root
 // colors
+
 :root {
   // base
   --font-family: "Lato", sans-serif;
@@ -11,4 +12,23 @@
   --light-color: #fff;
   --dark-color: #000;
   --main-color: #191822;
+  --facebook-color: #1b74e4;
+  --section-color: #1b1927;
+  --bg-color: #000;
+}
+
+.light-theme {
+  // base
+  --font-family: "Lato", sans-serif;
+  --content-width: 1133px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #000;
+  --dark-color: rgb(77 77 77);
+  --main-color: #fff;
+  --facebook-color: #1b74e4;
+  --section-color: #d6e8ff;
+  --bg-color: #fff;
 }

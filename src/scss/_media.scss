@@ -1,0 +1,261 @@
+@media (hover: hover) and (pointer: fine) {
+  .nav {
+    &__item {
+      &:hover {
+        transform: scale(1.07);
+
+        &::after {
+          width: 100%;
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+      }
+    }
+
+    &__icon-wrapper {
+      &--sun {
+        &:hover {
+          &::before {
+            transform: scale(1);
+          }
+        }
+      }
+
+      &--moon {
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .promo {
+    &__link:hover {
+      .promo__link-icon {
+        fill: var(--bg-color);
+      }
+    }
+
+    &__btn-link,
+    &__link {
+      &:hover {
+        color: var(--bg-color);
+        background-color: var(--light-color);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .directions {
+    &__card {
+      &:hover {
+        background-color: var(--bg-color);
+        transform: translateY(-35px);
+      }
+    }
+  }
+
+  .video-block {
+    &__btn-play {
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+  }
+
+  .interview__link-full:hover {
+    text-decoration: underline;
+  }
+
+  .footer__contacts-link:hover {
+    transform: translateY(-3px);
+  }
+}
+
+// ==============================>
+
+@media (max-width: 991px) {
+  .promo {
+    &__image-wrapper {
+      display: none;
+    }
+  }
+
+  .about {
+    &__text {
+      &:not(.about__text--right) {
+        margin-right: 20px;
+      }
+
+      &--right {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .directions {
+    padding: 130px 0;
+
+    &__card {
+      --margin: 20px;
+
+      padding: 30px 15px;
+    }
+  }
+
+  .video-block {
+    margin-bottom: 30px;
+  }
+
+  .interview {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__descr {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+
+  .nav {
+    &__list {
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 98;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      width: 70%;
+      height: 100vh;
+      background-color: rgb(15 14 20 / 98%);
+      transform: translateX(100%);
+      transition: transform 500ms ease-in-out;
+
+      &--active {
+        transform: translateX(0);
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin: 0;
+      margin-bottom: 60px;
+    }
+
+    &__link {
+      font-size: 35px;
+      text-transform: uppercase;
+    }
+
+    &__switch-theme {
+      margin-right: 25px;
+    }
+  }
+
+  .about {
+    padding: 100px 0;
+
+    &__descr {
+      font-size: 20px;
+    }
+
+    &__text--right {
+      text-align: center;
+    }
+
+    &__title {
+      margin-bottom: 35px;
+    }
+
+    &__wrapper:not(:last-child) {
+      margin-bottom: 70px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__text,
+    &__text:not(.about__text--right) {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    &__wrapper,
+    &__wrapper-reverse {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .directions {
+    padding: 100px 0;
+
+    &__cards {
+      padding: 0 100px;
+    }
+
+    &__card {
+      --elements: 1;
+      --margin: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  .interview {
+    padding: 85px 0;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__descr {
+      font-size: 20px;
+    }
+  }
+
+  .video-block {
+    width: 100%;
+  }
+
+  .footer {
+    &__text {
+      flex-direction: column;
+
+      &-item {
+        width: 100%;
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
+
+        &--text-right {
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 576px)
