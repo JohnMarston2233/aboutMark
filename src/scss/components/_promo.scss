@@ -2,7 +2,6 @@
   @include flex;
 
   justify-content: space-between;
-  transition: filter 500ms ease-in-out;
 
   &__text {
     margin-right: 20px;
@@ -101,9 +100,5 @@
 
   &__image {
     transform: translateY(-36px);
-  }
-
-  &--burger {
-    filter: blur(6px);
   }
 }

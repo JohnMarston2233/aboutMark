@@ -8,12 +8,11 @@ export function burger(){
   const overlay = document?.querySelector('[data-menu-overlay]');
   const promo = document.querySelector('.promo');
   const logo = document.querySelector('.logo');
+  const about = document.querySelector('.about');
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('nav__list--active');
-    promo.classList.toggle('promo--burger');
-    logo.classList.toggle('logo--burger');
 
     if (menu?.classList.contains('nav__list--active')) {
       burger?.setAttribute('aria-expanded', 'true');
@@ -31,8 +30,6 @@ export function burger(){
     burger?.setAttribute('aria-label', 'Открыть меню');
     burger.classList.remove('burger--active');
     menu.classList.remove('nav__list--active');
-    promo.classList.remove('promo--burger');
-    logo.classList.remove('logo--burger');
     enableScroll();
   });
 
@@ -42,8 +39,6 @@ export function burger(){
       burger?.setAttribute('aria-label', 'Открыть меню');
       burger.classList.remove('burger--active');
       menu.classList.remove('nav__list--active');
-      promo.classList.remove('promo--burger');
-      logo.classList.remove('logo--burger');
       enableScroll();
     });
   });
